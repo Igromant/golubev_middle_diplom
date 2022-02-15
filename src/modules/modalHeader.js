@@ -2,7 +2,7 @@ const modalHeader = () => {
   const modal = document.querySelector(".header-modal");
   const btns = document.querySelectorAll("a[href^='#callback']");
   const modalContent = document.querySelector(".header-modal--opened");
-  const overlay = document.querySelector(".overlay");
+  const overlay = document.querySelector("overlay");
 
 
   //Условие
