@@ -21,7 +21,6 @@ const scroll = () => {
         e.preventDefault();
         const id = btnScroll.getAttribute('href');
 
-
     document.querySelector(id).scrollIntoView({
         behavior: 'smooth',
         block: 'start'

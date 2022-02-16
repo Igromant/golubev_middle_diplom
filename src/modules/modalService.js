@@ -2,6 +2,7 @@ const modalHeader = () => {
     const modal = document.querySelector(".services-modal");
     const btns = document.querySelectorAll("a[href^='#application']");
     const modalContent = document.querySelector(".services-modal--opened");
+    const btnClose = document.querySelector(".services-modal__close")
     const overlay = document.querySelector(".overlay");
   
   
@@ -32,11 +33,14 @@ const modalHeader = () => {
     });
   
     // Событие по клику
-    modal.addEventListener("click", (e) => {
-      if (/* !e.target.closest(".overlay") ||*/ e.target.classList.contains("services-modal__close")) {
+    btnClose.addEventListener("click", () => {
           modal.style.display = "none";
           overlay.style.display = "none";
-      }
+    });
+
+    overlay.addEventListener("click", () => {
+          modal.style.display = "none";
+          overlay.style.display = "none";
     });
   };
   

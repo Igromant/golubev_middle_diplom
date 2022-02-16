@@ -1,35 +1,46 @@
 const certificate = () => {
-  const modal = document.querySelector(".header-modal");
-
-  const img = document.querySelector("img-responsive")
-  const btnClose = document.querySelector("services-modal__close")
     const btns = document.querySelectorAll(".sertificate-document");
     const overlay = document.querySelector(".overlay");
-    const modalContent = document.querySelector(".header-modal--opened");
 
+    const modalImg = document.createElement('div');
+    modalImg.classList.add('header-modal', 'header-modal--opened');
+    modalImg.style.cssText='max-height: 100%; margin: 30px;'
+    document.body.append(modalImg);
 
-  
+    const btnClose = document.querySelector('.header-modal__close')
+    const btnImg = btnClose.cloneNode(true);
+    modalImg.append(btnImg);
+
+    const docResource = document.querySelector('.sertificate-document .img-responsive')
+    const docImg = docResource.cloneNode(true);
+    docImg.src = "images/documents/original/document4.jpg"
+    docImg.style.cssText=''
+    
+    modalImg.append(docImg)
+
     //Условие
     btns.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
 
-        modal.style.display = 'block';
-
-        modal.innerHTML = '';
+        modalImg.style.display = 'block';
 
     
-        modal.append('')
+        
         overlay.style.display = "block";
       });
     });
   
     // Событие по клику
-    modal.addEventListener("click", (e) => {
-      if (/* !e.target.closest(".overlay") ||*/ e.target.classList.contains("header-modal__close")) {
+    btnImg.addEventListener("click", () => {
+        modalImg.style.display = 'none';
           overlay.style.display = "none";
-      }
     });
+
+    overlay.addEventListener("click", () => {
+      modalImg.style.display = 'none';
+        overlay.style.display = "none";
+  });
   };
   
   export default certificate;
