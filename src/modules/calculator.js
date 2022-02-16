@@ -1,9 +1,9 @@
 const calculator = (price = 100) => {
-    const calcBlock = document.querySelector("#calc");
-    const calcTypeMat = document.querySelector("#calc-type-material");
-    const calcType = document.querySelector("#calc-type");
-    const calcSquare = document.querySelector("#calc-input");
-    const total = document.querySelector("#calc-total");
+    const calcBlock = document.getElementById("calc");
+    const calcTypeMat = document.getElementById("calc-type-material");
+    const calcType = document.getElementById("calc-type");
+    const calcSquare = document.getElementById("calc-input");
+    const total = document.getElementById("calc-total");
   
     const countCalculator = () => {
       const calcTypeValue = +calcType.options[calcType.selectedIndex].value;
@@ -21,7 +21,8 @@ const calculator = (price = 100) => {
       total.value = totalValue;
     };
   
-    calcBlock.addEventListener("input", (e) => {
+    if (calcBlock !== null) {
+      calcBlock.addEventListener("input", (e) => {
       if (
         e.target === calcType ||
         e.target === calcTypeMat ||
@@ -30,6 +31,8 @@ const calculator = (price = 100) => {
         countCalculator();
       }
     });
+    }
+    
   };
   
   export default calculator;
