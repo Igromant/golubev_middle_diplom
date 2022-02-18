@@ -1,4 +1,4 @@
-const calculator = (price = 100) => {
+const calculator = () => {
     const calcBlock = document.getElementById("calc");
     const calcTypeMat = document.getElementById("calc-type-material");
     const calcType = document.getElementById("calc-type");
@@ -13,7 +13,7 @@ const calculator = (price = 100) => {
       let totalValue = 0;
   
       if (calcType.value && calcTypeMatValue && calcSquare.value) {
-        totalValue = price * calcTypeValue * calcTypeMatValue * calcSquareValue;
+        totalValue = calcTypeValue * calcTypeMatValue * calcSquareValue;
       } else {
         totalValue = 0;
       }

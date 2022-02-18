@@ -1,6 +1,8 @@
 const certificate = () => {
+
     const btns = document.querySelectorAll(".sertificate-document");
     const overlay = document.querySelector(".overlay");
+
 
     const modalImg = document.createElement('div');
     modalImg.classList.add('header-modal', 'header-modal--opened');
@@ -19,6 +21,7 @@ const certificate = () => {
 
     //Условие
     btns.forEach((btn) => {
+
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         modalImg.style.display = 'flex';

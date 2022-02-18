@@ -5,6 +5,7 @@ import timer from "./modules/timer";
 import calculator from "./modules/calculator";
 import certificate from "./modules/certificate";
 import scroll from "./modules/scroll";
+// import sendForm from "./modules/sendForm";
 
 scroll()
 modalHeader()
@@ -13,3 +14,4 @@ timer('28 Feb 2022')
 calculator()
 certificate()
 slider()
+// sendForm()

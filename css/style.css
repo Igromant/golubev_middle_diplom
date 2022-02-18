@@ -1665,6 +1665,14 @@ input.error {
   transform: rotate(90deg);
 }
 
+.item-not {
+  display: none;
+}
+
+.sertificate-document:hover .document-overlay{
+  opacity: 1;
+}
+
 @media (min-width: 576px) {
   .benefits-wrap {
     width: 100%;
