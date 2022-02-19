@@ -4,12 +4,12 @@ const slider = () => {
 
   
   const getToSlide = (sliderBlock) => {
-      const sliderAll = document.querySelectorAll(`.${sliderBlock.id}__item`);
+      const allSlides = document.querySelectorAll(`.${sliderBlock.id}__item`);
           let slides = []
           let slide1 = []
           let slide2 = []
 
-          sliderAll.forEach(slide => {
+          allSlides.forEach(slide => {
               if (slide.classList.contains('item-not')) {
                   slide2.push(slide)
               } else slide1.push(slide)
@@ -36,6 +36,7 @@ const slider = () => {
         e.preventDefault(e)
 
           let slides = getToSlide(sliderBlock).slides
+          
           let currentSlide = 0
 
           if (!e.target.closest('.arrows')) {
