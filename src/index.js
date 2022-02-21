@@ -1,20 +1,16 @@
-import modalHeader from "./modules/modalHeader";
-import modalService from "./modules/modalService";
+import modal from "./modules/modal";
 import slider from "./modules/slider";
 import timer from "./modules/timer";
 import calculator from "./modules/calculator";
-import certificate from "./modules/certificate";
 import scroll from "./modules/scroll";
 import valid from "./modules/valid";
 
 
 
 scroll()
-modalHeader()
-modalService()
+modal()
 timer('28 Feb 2022')
 calculator()
-certificate()
 slider()
 valid()
 

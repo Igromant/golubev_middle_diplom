@@ -19,7 +19,6 @@ const valid = () => {
             });
         });
 
-        console.log(calcBlock)
     if (calcBlock !== null) {
         calcBlock.addEventListener("input", (e) => {
           e.preventDefault();

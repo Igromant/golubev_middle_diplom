@@ -2,6 +2,7 @@ const slider = () => {
     
   const sliderBlocks = document.querySelectorAll('.slider')
 
+
   
   const getToSlide = (sliderBlock) => {
       const allSlides = document.querySelectorAll(`.${sliderBlock.id}__item`);
@@ -31,7 +32,22 @@ const slider = () => {
       })
   }
 
+  
+
   sliderBlocks.forEach((sliderBlock) => {
+
+    // if(window.outerWidth > 768){
+    //     let slides = getToSlide(sliderBlock).slides
+
+    //     slides.forEach(item =>{
+    //         if (item === ".benefits__item"){
+                
+    //         } else if (item === ".services__item"){
+    //             console.log('goodbuy')
+    //         }
+    //     })
+    // }
+
       sliderBlock.addEventListener('click', (e) => {
         e.preventDefault(e)
 

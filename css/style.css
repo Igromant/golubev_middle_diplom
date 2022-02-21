@@ -1578,6 +1578,30 @@ input.error {
   color: rgba(0, 0, 0, 0.35);
 }
 
+.certificate-modal {
+  display: none;
+}
+
+.certificate-modal--opened {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+.certificate-modal__close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 36px;
+  cursor: pointer;
+  background: #4f686e; 
+  padding: 8px; 
+  border-radius: 50%; 
+  color: #fff;
+}
+
 .overlay {
   display: none;
   position: fixed;
