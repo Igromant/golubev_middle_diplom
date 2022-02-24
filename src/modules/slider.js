@@ -3,12 +3,12 @@ const slider = () => {
   const sliderBlocks = document.querySelectorAll('.slider')
 
 
-  
   const getToSlide = (sliderBlock) => {
       const allSlides = document.querySelectorAll(`.${sliderBlock.id}__item`);
           let slides = []
           let slide1 = []
           let slide2 = []
+          
 
           allSlides.forEach(slide => {
               if (slide.classList.contains('item-not')) {
@@ -29,25 +29,22 @@ const slider = () => {
   const nextSlide = (slides, index, strClass) => {
       slides[index].forEach(slide => {
           slide.classList.remove(strClass)
+        
       })
   }
 
-  
 
   sliderBlocks.forEach((sliderBlock) => {
-
-    // if(window.outerWidth > 768){
-    //     let slides = getToSlide(sliderBlock).slides
-
-    //     slides.forEach(item =>{
-    //         if (item === ".benefits__item"){
-                
-    //         } else if (item === ".services__item"){
-    //             console.log('goodbuy')
-    //         }
-    //     })
-    // }
-
+    if (window.innerWidth <= 576) {
+        let slides = getToSlide(sliderBlock).slides
+        slides.forEach(item => {
+            for (let i = 1; i < item.length; i++) {
+                if (item[i] !== 'item-not') {
+                    item[i].classList.add('item-not')
+                }
+            }
+        })
+    }
       sliderBlock.addEventListener('click', (e) => {
         e.preventDefault(e)
 
@@ -76,5 +73,6 @@ const slider = () => {
           nextSlide(slides, currentSlide, 'item-not')
       })
   })
+  
 }
 export default slider

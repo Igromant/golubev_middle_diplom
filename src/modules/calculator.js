@@ -17,8 +17,8 @@ const calculator = () => {
       } else {
         totalValue = 0;
       }
-      
-      total.value = totalValue;
+     
+      total.placeholder = Math.round(totalValue) + ' ' + 'Руб.'
     };
   
     if (calcBlock !== null) {
