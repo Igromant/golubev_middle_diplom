@@ -5,6 +5,7 @@ import calculator from "./modules/calculator";
 import scroll from "./modules/scroll";
 import valid from "./modules/valid";
 import sendForm from "./modules/sendForm";
+import comments from "./modules/comments";
 
 
 
@@ -23,3 +24,4 @@ sendForm({
         }
     ]
 });
+comments();

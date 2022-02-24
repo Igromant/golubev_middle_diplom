@@ -22,14 +22,14 @@ const slider = () => {
 
   const prevSlide = (slides, index, strClass) => {
       slides[index].forEach(slide => {
-          slide.classList.add(strClass)
+        slide.classList.add(strClass)
+          
       })
   }
 
   const nextSlide = (slides, index, strClass) => {
       slides[index].forEach(slide => {
           slide.classList.remove(strClass)
-        
       })
   }
 
@@ -37,6 +37,7 @@ const slider = () => {
   sliderBlocks.forEach((sliderBlock) => {
     if (window.innerWidth <= 576) {
         let slides = getToSlide(sliderBlock).slides
+        document.querySelector('.benefits-wrap').style.justifyContent = "center"
         slides.forEach(item => {
             for (let i = 1; i < item.length; i++) {
                 if (item[i] !== 'item-not') {
