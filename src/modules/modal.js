@@ -65,7 +65,6 @@ const modal = () => {
     overlay.style.display = "none";
   }
 
-
   const btnFun = (modal, btnOpen, btn) => {
     const btns = document.querySelectorAll(btnOpen);
     const btnClose = document.querySelector(btn);

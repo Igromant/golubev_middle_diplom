@@ -1689,8 +1689,14 @@ input.error {
   transform: rotate(90deg);
 }
 
-.item-not {
+.benefits__item,.services__item {
   display: none;
+  opacity: 0;
+}
+
+.item__block {
+  display: block;
+  opacity: 1;
 }
 
 .sertificate-document:hover .document-overlay{
