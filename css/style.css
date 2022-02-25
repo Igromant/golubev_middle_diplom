@@ -1579,6 +1579,7 @@ input.error {
 }
 
 .certificate-modal {
+  max-width: 33%;
   display: none;
 }
 
@@ -1594,10 +1595,10 @@ input.error {
   position: absolute;
   top: 5px;
   right: 5px;
-  font-size: 36px;
+  font-size: 30px;
   cursor: pointer;
   background: #4f686e; 
-  padding: 8px; 
+  padding: 4px 8px; 
   border-radius: 50%; 
   color: #fff;
 }
@@ -1714,5 +1715,22 @@ input.error {
   .benefits-wrap {
     width: 100%;
     max-width: 576px;
+  }
+}
+
+@media (max-width: 990px) {
+  .certificate-modal__close{
+    padding: 0px 7px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-modal__close{
+      max-height: 15px;
+      padding: 0px 4px;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
   }
 }
