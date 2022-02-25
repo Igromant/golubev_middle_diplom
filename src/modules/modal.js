@@ -8,7 +8,7 @@ const modal = () => {
   const certificate = () => {
     const modalCertificate = document.createElement('div');
     modalCertificate.classList.add('certificate-modal', 'certificate-modal--opened');
-    modalCertificate.style.cssText='max-width: 42%;'
+    modalCertificate.style.cssText='max-width: 33%;'
     document.body.append(modalCertificate);
 
     const btnClose = document.createElement('span');
@@ -57,6 +57,7 @@ const modal = () => {
       });
     } else {
       modal.style.display = "block";
+      overlay.style.display = "block";
     }
   }
 
